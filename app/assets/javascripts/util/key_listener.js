@@ -1,9 +1,9 @@
 $(document).keydown(function(event){
   key = event.keyCode;
-  console.log(String.fromCharCode(key).toLowerCase() + " down");
+  keyActions.keyDown(String.fromCharCode(key).toLowerCase());
 });
 
 $(document).keyup(function(event){
   key = event.keyCode;
-  console.log(String.fromCharCode(key).toLowerCase() + " up");
+  keyActions.keyUp(String.fromCharCode(key).toLowerCase());
 });
