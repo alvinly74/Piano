@@ -10,9 +10,9 @@ var Organ = React.createClass({
     this.setState({});
   },
   keys: function(){
-    Object.keys(window.TONES).map(function(el){
+    return Object.keys(window.TONES).map(function(el){
       return(
-        <Key freq={el}/>
+        <Key freq={el} key={el}/>
       );
     });
   },
