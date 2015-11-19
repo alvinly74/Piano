@@ -1,4 +1,9 @@
+.Organ{
+  height: 300px;
+  width: 400px;
+}
 .key{
+  display: inline-flex;
   width: 50px;
   height: 50px;
   border: 5px solid lime;

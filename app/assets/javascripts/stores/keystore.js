@@ -5,7 +5,6 @@
   var LIST_CHANGE = "list change";
   var addKey = function(key){
     if (_keys.indexOf(key) == -1){
-    console.log("added " + key);
     _keys.push(key);
     }
   };
@@ -13,7 +12,6 @@
   var removeKey = function(key){
     var index = _keys.indexOf(key);
     if (index != -1){
-      console.log("removed " + key);
       _keys.splice(index,1);
     }
   };

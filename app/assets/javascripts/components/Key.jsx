@@ -18,14 +18,14 @@ var Key = React.createClass({
     if (this.state.pressed.indexOf(this.props.freq) >-1){
       return (
       <div className="key pressed">
-
+        {String.fromCharCode(this.props.freq)}
       </div>
     );
 
     }
       return (
       <div className="key">
-
+        {String.fromCharCode(this.props.freq)}
       </div>
   );
   }
