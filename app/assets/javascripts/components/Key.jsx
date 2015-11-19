@@ -20,14 +20,18 @@ var Key = React.createClass({
     if (this.state.pressed.indexOf(window.TONES[this.props.freq]) >-1){
       return (
       <div className={this._className() + " pressed"}>
+        <p className="note">
         {String.fromCharCode(this.props.freq)}
+        </p>
       </div>
     );
 
     }
       return (
       <div className={this._className()}>
+        <p className="note">
         {String.fromCharCode(this.props.freq)}
+        </p>
       </div>
   );
   }
