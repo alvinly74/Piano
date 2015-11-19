@@ -7,24 +7,26 @@ var Key = React.createClass({
   },
   _onChange: function(){
     this.setState({pressed: KeyStore.all()});
-    if (this.state.pressed.indexOf(this.props.freq) >-1){
+    if (this.state.pressed.indexOf(window.TONES[this.props.freq]) >-1){
       this.state.note.start();
     } else {
       this.state.note.stop();
     }
   },
-
+  _className: function(){
+    return "key " + this.props.form;
+  },
   render: function(){
-    if (this.state.pressed.indexOf(this.props.freq) >-1){
+    if (this.state.pressed.indexOf(window.TONES[this.props.freq]) >-1){
       return (
-      <div className="key pressed">
+      <div className={this._className() + " pressed"}>
         {String.fromCharCode(this.props.freq)}
       </div>
     );
 
     }
       return (
-      <div className="key">
+      <div className={this._className()}>
         {String.fromCharCode(this.props.freq)}
       </div>
   );

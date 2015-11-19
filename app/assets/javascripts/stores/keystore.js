@@ -4,13 +4,13 @@
   var _keys = [];
   var LIST_CHANGE = "list change";
   var addKey = function(key){
-    if (_keys.indexOf(key) == -1){
-    _keys.push(key);
+    if (_keys.indexOf(window.TONES[key]) == -1){
+    _keys.push(window.TONES[key]);
     }
   };
 
   var removeKey = function(key){
-    var index = _keys.indexOf(key);
+    var index = _keys.indexOf(window.TONES[key]);
     if (index != -1){
       _keys.splice(index,1);
     }
